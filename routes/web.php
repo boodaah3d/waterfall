@@ -3,11 +3,13 @@
 use App\Http\Controllers\PdfController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome');
-
-Route::view('dashboard', 'dashboard')
+Route::view('/', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
+
+Route::view('form', 'form')
+    ->middleware(['auth', 'verified'])
+    ->name('form');
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])
