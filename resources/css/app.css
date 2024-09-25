@@ -1,3 +1,102 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+@apply box-border;
+}
+
+img {
+font-style: italic;
+}
+
+html {
+@apply overflow-y-scroll;
+}
+
+#pdf {
+    @apply font-sans antialiased bg-white;
+}
+
+p {
+@apply pb-4;
+}
+
+/* Preformatted Text */
+.quill div,
+.quill p {
+@apply whitespace-pre-wrap;
+}
+
+/* Admin Tables */
+#pdf table {
+@apply divide-y divide-gray-500 border border-gray-500;
+}
+
+#pdf thead {
+@apply bg-gray-200;
+}
+
+#pdf thead tr {
+@apply divide-x divide-gray-600;
+}
+
+#pdf thead th {
+@apply px-4 py-2 text-sm font-semibold text-gray-900 whitespace-nowrap;
+}
+
+#pdf tbody {
+@apply divide-y divide-gray-500;
+}
+
+#pdf tbody tr {
+@apply divide-x divide-gray-500;
+}
+
+#pdf tbody td {
+@apply text-sm text-gray-600 whitespace-nowrap grow-0 align-top;
+}
+
+#pdf tbody td {
+@apply px-2 py-1.5;
+}
+
+#pdf tbody td.wrap-text {
+@apply whitespace-normal grow;
+}
+
+#pdf table.labelled tbody td:last-of-type {
+@apply w-full;
+}
+
+#pdf table.labelled thead th,
+#pdf table.labelled tbody td {
+@apply py-1.5;
+}
+
+#pdf table.labelled tbody td:first-of-type,
+#pdf table.shipping tbody td:first-of-type {
+@apply font-semibold text-gray-900;
+}
+
+#pdf table.shipping tbody td {
+@apply text-lg text-center;
+}
+
+/* Forms */
+input:disabled {
+@apply bg-gray-200 text-gray-400;
+}
+
+/* Quill Editor */
+.ql-editor {
+    @apply text-base font-sans;
+}
+
+.ql-editor p {
+@apply pb-4;
+}
+
+.ql-toolbar {
+@apply rounded-t-md;
+}
